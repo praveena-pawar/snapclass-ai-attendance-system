@@ -74,6 +74,7 @@ def student_dashboard():
                     unenroll_student_to_subject(student_id, sid)
                     st.toast(f"Unenrolled from {sub['name']} Successfully!")
                     st.rerun()
+                    
 
         with cols[i % 2]:
 
