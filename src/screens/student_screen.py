@@ -70,7 +70,7 @@ def student_dashboard():
                     "<div style='margin-top:15px'></div>",
                     unsafe_allow_html=True
                 )
-                if st.button("Unenroll from this course", type='tertiary', width='stretch', icon=':material/delete_forever:'):
+                if st.button("Unenroll from this course", key=f"unenroll_{sid}", type='tertiary', width='stretch', icon=':material/delete_forever:'):
                     unenroll_student_to_subject(student_id, sid)
                     st.toast(f"Unenrolled from {sub['name']} Successfully!")
                     st.rerun()
